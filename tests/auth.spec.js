@@ -1,6 +1,6 @@
 const request = require('supertest')
 const {connect} = require('./database')
-const userModel = require('../models/user')
+const userModel = require('./models/user')
 const app = require('../app');
 
 describe('Auth: Signup', () => {

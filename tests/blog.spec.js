@@ -20,7 +20,7 @@ describe('Blog Route' , () =>{
         .post('/login')
         .set('content-type', 'application/json')
         .send({
-           username : 'anikiyusuf99gmail.com',
+           username : 'anikiyusuf99@gmail.com',
            password:'654321'
         });
         token = loginResponse.body.token;
@@ -36,6 +36,7 @@ describe('Blog Route' , () =>{
         await BlogModel.create({
                  author:'Jack Hallow',
                  title:'Churchill down',
+                 description:'This story is base on horse game and gambling',
                  state: 'draft',
                  read_count: 0,
                  read_Time:'',
@@ -69,6 +70,7 @@ describe('Blog Route' , () =>{
         await BlogSchema.create({
                  author:'Jack Hallow',
                  title:'Churchill down',
+                 description:'This story is base on horse game and gambling',
                  state: 'draft',
                  read_count: 0,
                  read_Time:'',
@@ -80,6 +82,7 @@ describe('Blog Route' , () =>{
           
                  author:'Jack Hallow',
                  title:'Churchill down',
+                 description:'This story is base on horse game and gambling',
                  state: 'draft',
                  read_count: 0,
                  read_Time:'',

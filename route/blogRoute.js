@@ -5,9 +5,9 @@ const blogRouter = express.Router();
 
 blogRouter.post('/', BlogController.createBlog)
 
-blogRouter.get('/:blogId', BlogController.getBlog)
+blogRouter.get('/:blogId', BlogController.getBlogById)
 
-blogRouter.get('/', BlogController.getBlogs)
+blogRouter.get('/', BlogController.getAllBlogs)
 
 blogRouter.patch('/:id', BlogController.updateBlog)
 

@@ -14,7 +14,7 @@ app.use(express.json())
 
 connectionMongoDB()
 app.use('/', authRouter)
-app.use('/api/blog', passport.authenticate('jwt', {session:false}),blogRouter)
+//app.use('/api/blog', passport.authenticate('jwt', {session:false}),blogRouter)
 
 
 
