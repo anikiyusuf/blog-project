@@ -14,8 +14,10 @@ This is an api for a blogging  app
 ---
 ## Setup
 - Install NodeJS, mongodb
-- pull this repo
--
+- INstall mongoose 
+- Install passport JWT 
+- jes , Super Test 
+
 
 ---
 ## Base URL
