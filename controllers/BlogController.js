@@ -27,7 +27,9 @@ exports.getAllBlogs = async (req,res, next)=>{
     const blogs = await Blog
     .find({state:'publish'})
     .select({title:1})
-    .populate('author', {username:1})
+    .populate('author', {username:username})
+    .skip(page)
+    .limit(per_page)
     return res.json({
       status:true,
       data:blogs
@@ -42,8 +44,13 @@ exports.getBlogById = async (req, res, next) => {
   try {
     const { id } = req.params
     const blog = await blog.findById(id)
-      .populate('author', { username: 1 })
+      .populate('author', { username: username})
 
+     const {query} = req
+      const {
+      page = 1,
+      per_page= 20
+     } =  query ;
     if (blog.state !== 'published') {
       return res.status(403).json({
         status: false,

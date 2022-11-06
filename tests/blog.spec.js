@@ -3,7 +3,7 @@ const  {connect}= require('./database')
 const app = require('../app')
 const  BlogModel = require('./model/blog')
 const UserSchema = require('./model/users')
-const { connect } = require('mongoose')
+
 
 
 describe('Blog Route' , () =>{
